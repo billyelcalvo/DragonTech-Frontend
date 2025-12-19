@@ -1,4 +1,22 @@
 export function Footer() {
+    const footerIcons = [
+        {
+            title: "Visit DragonShop Instagram",
+            aria: "DragonShop Instagram",
+            icon: "/public/icons_plattforms.svg#instagram"
+        },
+        {
+            title: "Visit DragonShop Youtube",
+            aria: "DragonShop Youtube",
+            icon: "/public/icons_plattforms.svg#youtube"
+        },
+        {
+            title: "Visit DragonShop Linkedin",
+            aria: "DragonShop Linkedin",
+            icon: "/public/icons_plattforms.svg#linkedin"
+        }
+    ]
+
     return (
         <footer className="bg-yale-blue relative overflow-hidden">
 
@@ -43,15 +61,13 @@ export function Footer() {
                     <div>
                         <h4 className="text-white font-semibold mb-4">Connect</h4>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jade-green transition-colors">
-                                <span className="text-white">📷</span>
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jade-green transition-colors">
-                                <span className="text-white">🐦</span>
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jade-green transition-colors">
-                                <span className="text-white">💼</span>
-                            </a>
+                            {footerIcons.map((iconItem) =>
+                                <a href="#" aria-label={iconItem.aria} title={iconItem.title} className="size-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jade-green transition-transform hover:scale-110">
+                                    <svg className="size-6">
+                                        <use xlinkHref={iconItem.icon}></use>
+                                    </svg>
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>
