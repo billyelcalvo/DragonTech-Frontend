@@ -1,3 +1,9 @@
+import { useLayoutEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
 const TruckIcon = () => (
     <svg className="w-10 h-10" viewBox="0 0 122.88 99.36" fill="white" xmlns="http://www.w3.org/2000/svg">
         <path fillRule="evenodd" clipRule="evenodd" d="M78.29,23.33h18.44c5.52,0,4.23-0.66,7.33,3.93l15.53,22.97c3.25,4.81,3.3,3.77,3.3,9.54v18.99 c0,6.15-5.03,11.19-11.19,11.19h-2.28c0.2-0.99,0.3-2.02,0.3-3.07c0-8.77-7.11-15.89-15.89-15.89c-8.77,0-15.89,7.11-15.89,15.89 c0,1.05,0.1,2.07,0.3,3.07H58.14c0.19-0.99,0.3-2.02,0.3-3.07c0-8.77-7.11-15.89-15.89-15.89c-8.77,0-15.89,7.11-15.89,15.89 c0,1.05,0.1,2.07,0.3,3.07h-2.65c-5.66,0-10.29-4.63-10.29-10.29V63.05h64.27V23.33L78.29,23.33z M93.82,74.39 c6.89,0,12.48,5.59,12.48,12.49c0,6.89-5.59,12.48-12.48,12.48c-6.9,0-12.49-5.59-12.49-12.48C81.33,79.98,86.92,74.39,93.82,74.39 L93.82,74.39z M42.54,74.39c6.9,0,12.49,5.59,12.49,12.49c0,6.89-5.59,12.48-12.49,12.48c-6.89,0-12.48-5.59-12.48-12.48 C30.06,79.98,35.65,74.39,42.54,74.39L42.54,74.39z M42.54,83.18c2.04,0,3.7,1.65,3.7,3.7c0,2.04-1.65,3.69-3.7,3.69 c-2.04,0-3.69-1.66-3.69-3.69C38.85,84.83,40.51,83.18,42.54,83.18L42.54,83.18z M93.82,83.09c2.09,0,3.79,1.7,3.79,3.79 c0,2.09-1.7,3.79-3.79,3.79c-2.09,0-3.79-1.7-3.79-3.79C90.03,84.78,91.73,83.09,93.82,83.09L93.82,83.09z M89.01,32.35h3.55 l15.16,21.12v6.14c0,1.49-1.22,2.71-2.71,2.71h-16c-1.53,0-2.77-1.25-2.77-2.77V35.13C86.23,33.6,87.48,32.35,89.01,32.35 L89.01,32.35z M5.6,0h64.26c3.08,0,5.6,2.52,5.6,5.6v48.92c0,3.08-2.52,5.6-5.6,5.6H5.6c-3.08,0-5.6-2.52-5.6-5.6V5.6 C0,2.52,2.52,0,5.6,0L5.6,0z" />
@@ -17,6 +23,10 @@ const SupportIcon = () => (
 );
 
 export function FeaturesSection() {
+    const sectionRef = useRef(null)
+    const headerRef = useRef(null)
+    const cardsRef = useRef(null)
+
     const features = [
         {
             title: "Envío Rápido",
@@ -38,27 +48,67 @@ export function FeaturesSection() {
         },
     ];
 
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.fromTo(headerRef.current.children,
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: headerRef.current,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            )
+
+            // Animate cards
+            gsap.fromTo(cardsRef.current.children,
+                { opacity: 0, y: 60, scale: 0.95 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    duration: 0.7,
+                    stagger: 0.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: cardsRef.current,
+                        start: "top 75%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            )
+        }, sectionRef)
+
+        return () => ctx.revert()
+    }, [])
+
     return (
-        <section className="py-24 bg-gradient-to-b from-ghost-white to-white relative overflow-hidden">
+        <section ref={sectionRef} className="py-24 bg-gradient-to-b from-ghost-white to-white relative overflow-hidden">
 
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-jade-green/5 rounded-full blur-3xl"></div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="text-center mb-16">
-                    <span className="inline-block px-4 py-2 bg-jade-green/10 text-jade-green rounded-full text-sm font-semibold mb-4">
+                <div ref={headerRef} className="text-center mb-16">
+                    <span className="inline-block px-4 py-2 bg-jade-green/10 text-jade-green rounded-full text-sm font-semibold mb-4 opacity-0">
                         ¿Por Qué Elegirnos?
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-yale-blue mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-yale-blue mb-4 opacity-0">
                         Tecnología de <span className="bg-gradient-to-r from-jade-green to-bright-sky bg-clip-text text-transparent">Excelencia</span>
                     </h2>
-                    <p className="text-grey text-lg max-w-2xl mx-auto">
+                    <p className="text-grey text-lg max-w-2xl mx-auto opacity-0">
                         Nos comprometemos a brindarte la mejor experiencia de compra en tecnología.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {features.map((feature, index) => (
-                        <div key={index} className="group relative">
+                        <div key={index} className="group relative opacity-0">
 
                             <div className={`absolute -inset-0.5 bg-gradient-to-r ${feature.gradient} rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500`}></div>
 
