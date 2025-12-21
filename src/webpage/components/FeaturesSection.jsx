@@ -19,20 +19,20 @@ const SupportIcon = () => (
 export function FeaturesSection() {
     const features = [
         {
-            title: "Fast Delivery",
-            description: "Get your products delivered to your doorstep in record time with our express shipping.",
+            title: "Envío Rápido",
+            description: "Recibe tus productos tecnológicos en tiempo récord con nuestro servicio de envío express a todo el país.",
             icon: <TruckIcon />,
             gradient: "from-jade-green to-bright-sky",
         },
         {
-            title: "Premium Quality",
-            description: "We source only the finest materials to ensure our products meet the highest standards.",
+            title: "Calidad Premium",
+            description: "Trabajamos con las mejores marcas del mercado para garantizar productos de alto rendimiento y durabilidad.",
             icon: <DiamondIcon />,
             gradient: "from-bright-sky to-yale-blue",
         },
         {
-            title: "24/7 Support",
-            description: "Our dedicated support team is available around the clock to assist you with any questions.",
+            title: "Soporte 24/7",
+            description: "Nuestro equipo de expertos está disponible las 24 horas para ayudarte con cualquier consulta técnica.",
             icon: <SupportIcon />,
             gradient: "from-yale-blue to-jade-green",
         },
@@ -46,13 +46,13 @@ export function FeaturesSection() {
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
                     <span className="inline-block px-4 py-2 bg-jade-green/10 text-jade-green rounded-full text-sm font-semibold mb-4">
-                        Why Choose Us
+                        ¿Por Qué Elegirnos?
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold text-yale-blue mb-4">
-                        Built for <span className="bg-gradient-to-r from-jade-green to-bright-sky bg-clip-text text-transparent">Excellence</span>
+                        Tecnología de <span className="bg-gradient-to-r from-jade-green to-bright-sky bg-clip-text text-transparent">Excelencia</span>
                     </h2>
                     <p className="text-grey text-lg max-w-2xl mx-auto">
-                        We're committed to providing you with the best shopping experience possible.
+                        Nos comprometemos a brindarte la mejor experiencia de compra en tecnología.
                     </p>
                 </div>
 
