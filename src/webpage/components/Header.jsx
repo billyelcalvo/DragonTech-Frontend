@@ -6,20 +6,17 @@ export function Header() {
 
 
             <div className="flex items-center gap-3 cursor-pointer group">
-                <div className="w-10 h-10 bg-gradient-to-br from-jade-green to-bright-sky rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-jade-green/50 transition-shadow duration-300">
-                    <span className="text-white font-bold text-xl">M</span>
-                </div>
                 <span className="text-xl font-bold bg-gradient-to-r from-yale-blue to-jade-green bg-clip-text text-transparent">Dragon-Tech</span>
             </div>
 
 
             <nav className="hidden md:block">
                 <ul className="flex list-none gap-2 items-center m-0 p-0">
-                    <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">Home</a></li>
-                    <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">Products</a></li>
-                    <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">Contact</a></li>
-                    <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">Favorites</a></li>
-                    <li><a href="#" className="ml-4 px-6 py-2.5 rounded-full bg-gradient-to-r from-jade-green to-bright-sky text-white font-semibold text-sm shadow-lg shadow-jade-green/30 transition-all duration-300 hover:shadow-xl hover:shadow-jade-green/40 hover:-translate-y-0.5">🛒 Cart</a></li>
+                    <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">Inicio</a></li>
+                    <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">Productos</a></li>
+                    <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">Contacto</a></li>
+                    <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">Favoritos</a></li>
+                    <li><a href="#" className="ml-4 px-6 py-2.5 rounded-full bg-gradient-to-r from-jade-green to-bright-sky text-white font-semibold text-sm shadow-lg shadow-jade-green/30 transition-all duration-300 hover:shadow-xl hover:shadow-jade-green/40 hover:-translate-y-0.5">🛒 Carrito</a></li>
                 </ul>
             </nav>
 

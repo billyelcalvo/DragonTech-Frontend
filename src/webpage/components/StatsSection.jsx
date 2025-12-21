@@ -1,9 +1,9 @@
 export function StatsSection() {
     const stats = [
-        { value: "50K+", label: "Happy Customers", icon: "👥" },
-        { value: "99%", label: "Satisfaction Rate", icon: "⭐" },
-        { value: "24/7", label: "Support Available", icon: "💬" },
-        { value: "150+", label: "Products", icon: "📦" },
+        { value: "50K+", label: "Clientes Satisfechos", icon: "👥" },
+        { value: "99%", label: "Tasa de Satisfacción", icon: "⭐" },
+        { value: "24/7", label: "Soporte Técnico", icon: "💬" },
+        { value: "500+", label: "Productos Tech", icon: "📦" },
     ];
 
     return (
@@ -11,8 +11,8 @@ export function StatsSection() {
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by Thousands</h2>
-                    <p className="text-white/70 text-lg">Numbers that speak for themselves</p>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">La Confianza de Miles</h2>
+                    <p className="text-white/70 text-lg">Números que hablan por sí solos</p>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

@@ -33,33 +33,33 @@ export function Footer() {
                             <span className="text-xl font-bold text-white">Dragon-Tech</span>
                         </div>
                         <p className="text-white/60 text-sm leading-relaxed">
-                            Premium products for those who appreciate quality and style.
+                            Tu tienda de tecnología con los mejores productos y el mejor servicio.
                         </p>
                     </div>
 
 
                     <div>
-                        <h4 className="text-white font-semibold mb-4">Shop</h4>
+                        <h4 className="text-white font-semibold mb-4">Tienda</h4>
                         <ul className="space-y-2">
-                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">New Arrivals</a></li>
-                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Best Sellers</a></li>
-                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Sale</a></li>
-                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Collections</a></li>
+                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Nuevos Ingresos</a></li>
+                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Más Vendidos</a></li>
+                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Ofertas</a></li>
+                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Categorías</a></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="text-white font-semibold mb-4">Company</h4>
+                        <h4 className="text-white font-semibold mb-4">Empresa</h4>
                         <ul className="space-y-2">
-                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">About Us</a></li>
-                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Careers</a></li>
-                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Contact</a></li>
+                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Nosotros</a></li>
+                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Trabaja con Nosotros</a></li>
+                            <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Contacto</a></li>
                             <li><a href="#" className="text-white/60 hover:text-jade-green transition-colors text-sm">Blog</a></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="text-white font-semibold mb-4">Connect</h4>
+                        <h4 className="text-white font-semibold mb-4">Síguenos</h4>
                         <div className="flex gap-4">
                             {footerIcons.map((iconItem) =>
                                 <a href="#" aria-label={iconItem.aria} title={iconItem.title} className="size-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jade-green transition-transform hover:scale-110">
@@ -74,10 +74,10 @@ export function Footer() {
 
 
                 <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-white/40 text-sm">© 2024 DragonTech. All rights reserved.</p>
+                    <p className="text-white/40 text-sm">© 2024 DragonTech. Todos los derechos reservados.</p>
                     <div className="flex gap-6">
-                        <a href="#" className="text-white/40 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                        <a href="#" className="text-white/40 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="#" className="text-white/40 hover:text-white text-sm transition-colors">Política de Privacidad</a>
+                        <a href="#" className="text-white/40 hover:text-white text-sm transition-colors">Términos de Servicio</a>
                     </div>
                 </div>
             </div>
