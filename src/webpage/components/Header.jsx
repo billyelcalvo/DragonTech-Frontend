@@ -1,6 +1,9 @@
 
 
 export function Header() {
+
+    const tittles = ['Inicio', 'Productos', 'Contacto', 'Favoritos']
+
     return (
         <header className="h-20 px-8 md:px-16 flex items-center justify-between sticky top-0 z-50 bg-gradient-to-r from-ghost-white/90 via-ghost-white/80 to-ghost-white/90 backdrop-blur-xl shadow-lg border-b border-white/20">
 
@@ -12,10 +15,7 @@ export function Header() {
 
             <nav className="hidden md:block">
                 <ul className="flex list-none gap-2 items-center m-0 p-0">
-                    <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">Inicio</a></li>
-                    <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">Productos</a></li>
-                    <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">Contacto</a></li>
-                    <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">Favoritos</a></li>
+                    {tittles.map((itemString) => <li><a href="#" className="px-5 py-2.5 rounded-full text-yale-blue font-medium text-sm transition-all duration-300 hover:bg-jade-green hover:text-white hover:shadow-lg hover:shadow-jade-green/30 hover:-translate-y-0.5">{itemString}</a></li>)}
                     <li><a href="#" className="ml-4 px-6 py-2.5 rounded-full bg-gradient-to-r from-jade-green to-bright-sky text-white font-semibold text-sm shadow-lg shadow-jade-green/30 transition-all duration-300 hover:shadow-xl hover:shadow-jade-green/40 hover:-translate-y-0.5">🛒 Carrito</a></li>
                 </ul>
             </nav>
