@@ -11,7 +11,7 @@ export function Header() {
         if (!cartIcon) return
 
         const ctx = gsap.context(() => {
-            // Animación de entrada con bounce
+
             gsap.fromTo(cartIcon,
                 { scale: 0, rotation: -180, opacity: 0 },
                 {
@@ -24,7 +24,7 @@ export function Header() {
                 }
             )
 
-            // Animación de "latido" continua para llamar la atención
+
             gsap.to(cartIcon, {
                 scale: 1.1,
                 duration: 0.6,
@@ -35,7 +35,6 @@ export function Header() {
             })
         })
 
-        // Efecto hover con GSAP
         const handleMouseEnter = () => {
             gsap.to(cartIcon, {
                 scale: 1.3,

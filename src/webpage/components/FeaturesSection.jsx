@@ -66,7 +66,6 @@ export function FeaturesSection() {
                 }
             )
 
-            // Animate cards
             gsap.fromTo(cardsRef.current.children,
                 { opacity: 0, y: 60, scale: 0.95 },
                 {
