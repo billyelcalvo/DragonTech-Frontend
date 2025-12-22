@@ -74,7 +74,7 @@ export function Footer() {
 
 
                 <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-white/40 text-sm">© 2024 DragonTech. Todos los derechos reservados.</p>
+                    <p className="text-white/40 text-sm">© 2025 DragonTech. Todos los derechos reservados.</p>
                     <div className="flex gap-6">
                         <a href="#" className="text-white/40 hover:text-white text-sm transition-colors">Política de Privacidad</a>
                         <a href="#" className="text-white/40 hover:text-white text-sm transition-colors">Términos de Servicio</a>
