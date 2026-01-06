@@ -1,11 +1,13 @@
-import { Routes, Route } from 'react-router'
+import { Routes, Route } from 'react-router-dom'
 import { HomePage } from './webpage/pages/HomePage.jsx'
-export function App() {
+import { ProductsPage } from './webpage/pages/ProductsPage.jsx'
 
+export function App() {
   return (
     <>
       <Routes>
-        <Route index element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/productos" element={<ProductsPage />} />
       </Routes>
     </>
   )
